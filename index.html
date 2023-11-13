@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+<!--  &lt;!&ndash; Google Tag Manager &ndash;&gt;-->
+<!--  <script type="4faa340c8723003c35d70dad-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
+<!--         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],-->
+<!--         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=-->
+<!--         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);-->
+<!--         })(window,document,'script','dataLayer','GTM-M72V252');-->
+<!--      -->
+<!--  </script>-->
+  <!-- End Google Tag Manager -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title>Testing Redirect</title>
+  <!-- <script type="4faa340c8723003c35d70dad-text/javascript">
+       var ref = document.referrer;
+       var siteurl = "https://iota-news.com/";
+       if (ref.indexOf(siteurl)!= -1){
+       }
+       else{
+       (function(window, location) {
+           history.replaceState(null, document.title, location.pathname+"#!/auth");
+           history.pushState(null, document.title, location.pathname);
+       
+           window.addEventListener("popstate", function() {
+             if(location.hash === "#!/auth") {
+               history.replaceState(null, document.title, location.pathname);
+               setTimeout(function(){
+                 location.replace("https://go.iota-news.com/guides/etoro-ger");
+               },0);
+             }
+           }, false);
+       })(window, location);
+       }
+    </script> -->
+  <script>
+    // var ref = document.referrer;
+    var ref = 'https://google.com';
+    var siteurl = 'https://iota-news.com/';
+    if (ref.indexOf(siteurl) != -1) {
+    } else {
+      (function (window, location) {
+        history.replaceState(null, document.title, location.pathname + '#!/auth');
+        history.pushState(null, document.title, location.pathname);
+
+        window.addEventListener(
+          'popstate',
+          function () {
+            if (location.hash === '#!/auth') {
+              history.replaceState(null, document.title, location.pathname);
+              setTimeout(function () {
+                location.replace('https://go.iota-news.com/guides/etoro-ger');
+              }, 0);
+            }
+          },
+          false,
+        );
+      })(window, location);
+    }
+  </script>
+</head>
+
+<body class="stretched">
+<!-- End Google Tag Manager (noscript) -->
+<div id="wrapper" class="clearfix">
+  <h1>Redirection through JavaScript</h1>
+</div>
+
+</body>
+
+</html>
